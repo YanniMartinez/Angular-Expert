@@ -28,4 +28,11 @@ Después de la sección, podrán ver con otros ojos TypeScript y enfocarnos en t
 
 ## Comenzando
 
-Como primer paso es descargar la carpeta referente al 01-intro y descargar todas las dependencias empleando el comando `npm install`. Una vez que termine de instalar todas las dependencias podemos correr el comando `npm start` para que se levante el server sobre el puerto 8081
+Como primer paso es descargar la carpeta referente al 01-intro y descargar todas las dependencias empleando el comando `npm install`. Una vez que termine de instalar todas las dependencias podemos correr el comando `npm start` para que se levante el server sobre el puerto 8081.
+
+El tipado de Typescript sólo se ve en el código, sin embargo, cuando se depliegue no veremos el tipado por ejemplo el `: string | boolean`
+
+## Interfaces
+El código que se implementa entre interfaces nunca llega a reflejarse en el navegador:
+
+<img src="01-ts-intro/src/ejercicios/0-interfaces.png"/>
