@@ -20,9 +20,13 @@ class Heroe{
     imprimirNombre(){
         return this.alterEgo + ' ' + this.nombreReal;
     }
+
+    constructor( alterEgo: string){
+        this.alterEgo = alterEgo;
+    }
 }
 
-interface Personaje3{
+/* interface Personaje3{
     alterEgo: string;
     edad: number;
     nombreReal: number;
@@ -30,9 +34,28 @@ interface Personaje3{
     //Aquí solo definimos tipos de datos o esqueleto
     imprimirNombre: () => string;
 }
+ */
 
-const ironman = new Heroe();
+
+const ironman = new Heroe('Iron Man');
 
 //const spiderman: Personaje3 = {};
 
 console.log(ironman);
+
+
+
+/**
+ * Alternativa más común de como encontramos los constructores
+ * y clases dentro de Typescript
+ */
+class Heroe2{
+    constructor(
+        public alterEgo: string,
+        public edad?: number, //Opcional
+        public nombreReal?: string //Opcional
+    ){}
+}
+
+const capitanAmerica = new Heroe2('Capitan America', 33, "Steve Rogers");
+console.log(capitanAmerica);
