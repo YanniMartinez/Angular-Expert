@@ -13,4 +13,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title: string = 'Contador App'; //Aquí va el titulo que se le dió
+  numero: number = 10;
 }

@@ -1,2 +1,8 @@
 <!-- Si quisieramos pintar el valor de la variable del app.componente podriamos poner lo siguiente --> 
 <h1> {{ title }} </h1>
+
+<!-- Cuando se ponen () significa que es un evento y aplica la acción -->
+<button (click)=" numero = numero + 1; "> + 1 </button>
+<span> {{ numero }} </span>
+<button (click)=" numero = numero - 1; "> - 1 </button>
+
