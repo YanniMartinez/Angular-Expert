@@ -2,7 +2,11 @@
     ===== Código de TypeScript =====
 */
 
-interface Producto{
+/**Al exportar, exponemos la interfaz a otros
+ * lugares listos para que sean utilizados sin
+ * ningun problema
+ */
+export interface Producto{
     desc: string;
     precio: number;
 }
@@ -35,7 +39,7 @@ console.log('ISV: ',isv)
  * más avanzada al foreach
  */
 
- function calculaISV2( productos: Producto[]) : [number,number]{
+export function calculaISV2( productos: Producto[]) : [number,number]{
     let total = 0;
 
     productos.forEach( ( {precio} ) => {
@@ -44,7 +48,11 @@ console.log('ISV: ',isv)
     return [total, total * 0.15];
 }
 
-const articulos2 = [ telefono, tableta ]
+/**Al exportar la función ejecuta también el siguiente codigo
+ * por lo que podemos comentarlo para que no nos afecte
+ * Cuando se importa una función s eejecuta ese codigo
+ */
+/* const articulos2 = [ telefono, tableta ]
 const [total,isv2] = calculaISV2( articulos )
 console.log('Total: ',total)
-console.log('ISV: ',isv2)
+console.log('ISV: ',isv2) */
