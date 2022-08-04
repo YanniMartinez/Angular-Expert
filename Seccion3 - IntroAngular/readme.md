@@ -43,3 +43,7 @@ Para correr el server sólo hay que poner `ng serve -o`
 
 
 Dentro de la carpeta **environments** tenemos 2 archivos donde podemos alojarlas variables de entorno de TEST o de PROD.
+
+## Concepto de one way data binding - enlazado en una sola vía
+
+Si cambia el valor de la propiedad entonces lo redibujará en el HTML o DOM, en caso contrario sólo lo ignora, Angular hace estos movimientos de una manera muy eficiente y sabe identificar loque pasa.
