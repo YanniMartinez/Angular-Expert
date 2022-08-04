@@ -14,4 +14,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public title: string = 'Contador App'; //Aquí va el titulo que se le dió
   numero: number = 10;
+
+  /**Agregando método de suma */
+  sumar(){
+    this.numero +=1;
+  }
+
+  restar(){
+    this.numero -=1;
+  }
 }
