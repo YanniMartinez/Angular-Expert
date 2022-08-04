@@ -36,3 +36,7 @@ El tipado de Typescript sólo se ve en el código, sin embargo, cuando se deplie
 El código que se implementa entre interfaces nunca llega a reflejarse en el navegador:
 
 <img src="01-ts-intro/src/ejercicios/0-interfaces.png"/>
+
+## Componentes
+
+Cuando se crea un componente siempre debe ser importado en un módulo
