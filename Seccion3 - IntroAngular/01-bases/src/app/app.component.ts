@@ -23,4 +23,8 @@ export class AppComponent {
   restar(){
     this.numero -=1;
   }
+
+  acumular( valor: number ){
+    this.numero += valor;
+  }
 }
