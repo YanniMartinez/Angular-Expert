@@ -11,6 +11,15 @@
  * Las clases permiten instanciar
  */
 
+class PersonaNormal{
+
+    constructor ( 
+        public nombre: string, 
+        public direccion: string
+    ){}
+}
+
+
 class Heroe{
     alterEgo: string;
     edad: number;
@@ -49,12 +58,16 @@ console.log(ironman);
  * Alternativa más común de como encontramos los constructores
  * y clases dentro de Typescript
  */
-class Heroe2{
+class Heroe2 extends PersonaNormal{
     constructor(
         public alterEgo: string,
         public edad?: number, //Opcional
         public nombreReal?: string //Opcional
-    ){}
+    ){
+        //Se mandan los valores del argumento del contructor
+        super( nombreReal, 'New York, USA'); //Manda a llamar el constructor de la clase que extiende
+
+    }
 }
 
 const capitanAmerica = new Heroe2('Capitan America', 33, "Steve Rogers");
