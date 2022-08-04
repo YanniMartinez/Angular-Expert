@@ -40,3 +40,6 @@ Para correr el server sólo hay que poner `ng serve -o`
 |.editorconfig|Son ciertas reglas para Typescript|
 |.browserlistrc| Solo sirve para dar compatibilidad con navegadores como el explorer 11|
 |e2e|Pruebas End to End|
+
+
+Dentro de la carpeta **environments** tenemos 2 archivos donde podemos alojarlas variables de entorno de TEST o de PROD.
