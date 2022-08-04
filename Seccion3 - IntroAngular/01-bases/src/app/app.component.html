@@ -1,8 +1,10 @@
 <!-- Si quisieramos pintar el valor de la variable del app.componente podriamos poner lo siguiente --> 
 <h1> {{ title }} </h1>
 
+<h3> La base es: <strong> {{ base }}</strong></h3>
+
 <!-- Cuando se ponen () significa que es un evento y aplica la acción -->
-<button (click)="acumular(+1)"> + 1 </button>
+<button (click)="acumular(+base)"> + {{ base }} </button>
 <span> {{ numero }} </span>
-<button (click)="acumular(-1)"> - 1 </button>
+<button (click)="acumular(-base)"> - {{ base }} </button>
 

@@ -12,8 +12,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public title: string = 'Contador App'; //Aquí va el titulo que se le dió
+  title: string = 'Contador App'; //Aquí va el titulo que se le dió
   numero: number = 10;
+
+  /**Crear propiedad llamada Base:number=5 
+   * Mostrarlo en el HTML, posteriormente sumar ese valor
+   * dentro del contador que ya se tenia con anterioridad
+  */
+  base: number = 5;
 
   /**Agregando método de suma */
   sumar(){
