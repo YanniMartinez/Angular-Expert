@@ -47,3 +47,6 @@ Dentro de la carpeta **environments** tenemos 2 archivos donde podemos alojarlas
 ## Concepto de one way data binding - enlazado en una sola vía
 
 Si cambia el valor de la propiedad entonces lo redibujará en el HTML o DOM, en caso contrario sólo lo ignora, Angular hace estos movimientos de una manera muy eficiente y sabe identificar loque pasa.
+
+## Creando componentes de forma dinámica
+Para ello es tan fácil como ejecutar el siguiente comando: `ng g c heroes/listado` estando dentro de la carpeta raíz de nuestro proyecto.
