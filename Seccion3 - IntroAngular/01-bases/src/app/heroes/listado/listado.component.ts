@@ -18,4 +18,5 @@ export class ListadoComponent {
     //Si no puede borrar nada entonces que retorne cadana vacia
     this.heroeBorrado = this.heroes.pop() || '';
   }
+
 }

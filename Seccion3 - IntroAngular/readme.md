@@ -50,3 +50,9 @@ Si cambia el valor de la propiedad entonces lo redibujará en el HTML o DOM, en 
 
 ## Creando componentes de forma dinámica
 Para ello es tan fácil como ejecutar el siguiente comando: `ng g c heroes/listado` estando dentro de la carpeta raíz de nuestro proyecto.
+
+## Directivas
+|Directiva|Funcionalidad|
+|--|--|
+|*ngFor|Permite iterar una colección|
+|*ngIf|Actua como un if cualquiera y puede realizarse|
