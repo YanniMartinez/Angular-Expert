@@ -17,11 +17,12 @@
         <h3>Agregar</h3>
         <hr>
 
-        <form>
+        <!-- El que dispara todo es el Submit, no el boton. Además cacha el evento -->
+        <form (submit)="agregar( $event )">
             <input type="text" placeholder="Nombre" />
             <input type="number" placeholder="Poder" />
             
-            <button>
+            <button type="submit">
                 Agregar
             </button>
         </form>
