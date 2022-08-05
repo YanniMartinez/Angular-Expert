@@ -14,6 +14,7 @@ import { ListadoComponent } from "./listado/listado.component";
         ListadoComponent
     ],
     imports: [
+        //El CommonModule importa algunas directivas como los ngIf, ngFor
         CommonModule
     ]
 })
