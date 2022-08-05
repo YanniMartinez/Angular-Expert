@@ -7,8 +7,7 @@ import { Component} from '@angular/core';
 })
 export class MainPageComponent {
 
-  agregar( event : any){
-    event.preventDefault(); //Evita la recarga automatica de un fomr
-    console.log("Hey!!")
+  agregar( ){
+    console.log("Esta es una prueba")
   }
 }

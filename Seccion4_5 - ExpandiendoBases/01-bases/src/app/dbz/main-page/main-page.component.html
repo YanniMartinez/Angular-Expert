@@ -18,8 +18,10 @@
         <hr>
 
         <!-- El que dispara todo es el Submit, no el boton. Además cacha el evento -->
-        <form (submit)="agregar( $event )">
+        <form (ngSubmit)="agregar()">
+            
             <input type="text" placeholder="Nombre" />
+            
             <input type="number" placeholder="Poder" />
             
             <button type="submit">
