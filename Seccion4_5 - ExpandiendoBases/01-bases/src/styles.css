@@ -39,3 +39,18 @@
   .p-1 {
     padding: 1px;
   }
+
+/* Implementeado para DBZ */
+.row{
+  display: flex; /* Mejora el agrupado */
+}
+
+.col{
+  flex-grow: 1; /* Que se expanda lo más que pueda */
+  margin-right: 10px;
+}
+
+input{
+  display: block;
+  margin: 5px;
+}
