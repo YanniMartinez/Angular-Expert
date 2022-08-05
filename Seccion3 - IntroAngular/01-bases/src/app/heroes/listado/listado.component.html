@@ -2,11 +2,17 @@
 
 <!-- Otra solución era:
 <div *ngIf="heroeBorrado"> Es tan inteligente que si está vaia no cumple condicion-->
-<div *ngIf="heroeBorrado != '' ">
+<div *ngIf="heroeBorrado; else noBorrado">
     <h3>Héroe Borrado: <small>{{ heroeBorrado }}</small></h3>
 </div>
 
-<button *ngIf="heroes.length" (click)="borrarHeroe()">Borrar Heroe</button>
+<!-- Referencia del ng-if cuando hay un else -->
+<ng-template #noBorrado>
+    <h3>No ha borrado nada.</h3>
+</ng-template>
+
+
+<button (click)="borrarHeroe()">Borrar Heroe</button>
 
 <ul>
     <li *ngFor="let heroe of heroes; let i = index">

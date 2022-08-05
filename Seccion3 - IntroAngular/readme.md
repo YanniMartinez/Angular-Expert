@@ -56,3 +56,25 @@ Para ello es tan fácil como ejecutar el siguiente comando: `ng g c heroes/lista
 |--|--|
 |*ngFor|Permite iterar una colección|
 |*ngIf|Actua como un if cualquiera y puede realizarse|
+|*nfIf="Condicion; else id"|Ponemos un nombre en el identificador sobre el cual le haremos una referencia dentro del mismo template|
+
+
+#### Directivas ngIf-else y ngTemplate
+```
+<div *ngIf="heroeBorrado; else noBorrado">
+    <h3>Héroe Borrado: <small>{{ heroeBorrado }}</small></h3>
+</div>
+
+<!-- Referencia del ng-if cuando hay un else -->
+<ng-template #noBorrado>
+    <h3>No ha borrado nada.</h3>
+</ng-template>
+```
+
+
+## Modulos
+El objetivo de los modulos es agrupar componentes y piezas de nuestra aplicación que tienen sentido entre si.
+
+Objetivos que cumplen los módulos:
+1. Encapsular las cosas
+2. Carga perezoza (Lazy load): Es la carga de módulos que nunca se usan, este caso es que la carga perezoza sea cargada bajo demanda.
