@@ -1,4 +1,5 @@
 import { Component, Input} from '@angular/core';
+import { Personaje } from '../interfaces/dbz.interface';
 
 @Component({
   selector: 'app-personajes',
@@ -8,7 +9,7 @@ import { Component, Input} from '@angular/core';
 export class PersonajesComponent {
   
   /**Indica que recibirá info del componente padre */
-  @Input() personajes: any [] = [];
+  @Input() personajes: Personaje [] = [];
   //También podemos ponerle un nuevo nombre, ej:
   //@Input("Guerreros") personajes: any [] = [];
 

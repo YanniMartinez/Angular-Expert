@@ -1,12 +1,5 @@
 import { Component} from '@angular/core';
-
-/**Definiendo interfaz interna sobre como
- * puede lucir nuestro personaje
- */
-interface Personaje{
-  nombre: string;
-  poder: number;
-}
+import { Personaje } from '../interfaces/dbz.interface';
 
 @Component({
   selector: 'app-main-page',
