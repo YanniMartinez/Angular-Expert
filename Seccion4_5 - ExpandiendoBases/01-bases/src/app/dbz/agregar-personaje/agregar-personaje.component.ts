@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
 
 @Component({
@@ -13,12 +13,20 @@ export class AgregarPersonajeComponent {
     poder: 14000
   }
 
+  /**Será la propiedad que propaguemos desde el hijo, diciendo que exportaremos
+   * un Personaje
+   */
+  @Output() onNuevoPersonaje: EventEmitter<Personaje> = new EventEmitter();
+
   agregar( ){
     if(this.nuevo.nombre.trim().length == 0){
       return;
     }
   
     console.log(this.nuevo);
+    //Emitiendo valor del valor de Nuevoo:
+    this.onNuevoPersonaje.emit( this.nuevo );
+
     this.nuevo = {
       nombre: '',
       poder: 0

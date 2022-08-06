@@ -26,4 +26,17 @@ Cuando se manda un valor significa que es un evento, por lo que sería con ()
 Es necesario poner el decorador `@Input()` Significa que recibirá información del componente padre. Esto se hereda desde el template HTML y se pone una sintaxis como la siguiente `[personajes]="personajes">` donde [personajes] será el valor de nuestro nuevo componente y ="personajes" será el valor de la variable del componente padre
 
 ## Emitir info desde el componente hijo al padre
-Para ello haremos uso del decorador `@Output`
+Para ello haremos uso del decorador `@Output` como el siguiente ejemplo:
+`@Output() onNuevoPersonaje: EventEmitter<Personaje> = new EventEmitter();`
+
+
+Para cachar algun valor dentro del template html padre podemos poder algo como:
+`(onNuevoPersonaje)="agregarNuevoPersonaje( $event )"> `
+
+Finalmente para usarlo dentro del componente padre podemos poner:
+
+```
+agregarNuevoPersonaje( guerrero: Personaje){
+    console.log(guerrero)
+  }
+```
