@@ -25,6 +25,7 @@ export class MainPageComponent {
   }
 
   agregarNuevoPersonaje( guerrero: Personaje){
+    //debugger; //Permite depurar código cuando llega a este punto
     this.personajes.push( guerrero );
     //console.log(guerrero)
   }

@@ -40,3 +40,8 @@ agregarNuevoPersonaje( guerrero: Personaje){
     console.log(guerrero)
   }
 ```
+
+## Depuración
+Es tan sencillo como incluir la línea de código `debugger` de JS para pausar la ejecución en ese punto y poder identificar que pasa en ese momento del programa.
+
+Además en Visual estudio podemos usar **F5** y podemos configurar una instancia de Google Chrome para depurar la aplicación de una manera muy sencilla.
