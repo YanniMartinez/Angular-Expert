@@ -62,3 +62,10 @@ Es decir, contendrá la lógica. Sirve para manipular el estado de la app.
 
 [Documentación sobre el servicio](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
+
+## Mandar release desde Git
+
+git tag -a v0.1.1 -m "Fin Seccion 5 Modulo DBZ"
+
+Enviar a GitHub:
+git push --tags
