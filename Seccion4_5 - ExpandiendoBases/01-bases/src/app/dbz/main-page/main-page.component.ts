@@ -9,11 +9,16 @@ import { DbzService } from '../services/dbz.service';
 })
 export class MainPageComponent {
 
-  personajes: Personaje[] = [] //Creandolo vacio
-
   nuevo: Personaje = {
     nombre: 'Maestro Roshi',
     poder: 1000
+  }
+
+  /**Funciona perfecto usando Get, es decir, retornamos
+   * los personajes usando simplemente este get
+   */
+  get personajes() : Personaje[] {
+    return this.dbzService.personajes;
   }
 
   agregarNuevoPersonaje( guerrero: Personaje){
@@ -27,6 +32,6 @@ export class MainPageComponent {
    * Lo que hicimos fue inyectar el servicio en este componente
   */
   constructor( private dbzService: DbzService ){
-    this.personajes = this.dbzService.personajes; //Igualamos a la data del servicio
+    
   }
 }
