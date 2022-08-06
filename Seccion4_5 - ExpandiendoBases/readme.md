@@ -18,3 +18,6 @@ Para manejar formularios en angular disponemos del siguiente `FormsModule`, este
 Cuando se manda un valor significa que es un evento, por lo que sería con ()
 
 `[(ngModel)]` significa que quiere tanto escuchar como emitir el evento. Esto lo cambia en tiempo real. A este concepto se le conoce como **two way data binding**. Esto quiere decir que tanto emite como recibe propiedades.
+
+
+`{{ personaje.poder | number}}` pinta con comas debido a la inteligencia de Angular.
