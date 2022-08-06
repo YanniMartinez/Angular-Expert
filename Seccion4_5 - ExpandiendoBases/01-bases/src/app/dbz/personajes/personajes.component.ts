@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-personajes',
@@ -6,7 +6,10 @@ import { Component} from '@angular/core';
   styleUrls: ['./personajes.component.css']
 })
 export class PersonajesComponent {
-
-  personajes: any [] = [];
+  
+  /**Indica que recibirá info del componente padre */
+  @Input() personajes: any [] = [];
+  //También podemos ponerle un nuevo nombre, ej:
+  //@Input("Guerreros") personajes: any [] = [];
 
 }

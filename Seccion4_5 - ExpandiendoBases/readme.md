@@ -21,3 +21,6 @@ Cuando se manda un valor significa que es un evento, por lo que sería con ()
 
 
 `{{ personaje.poder | number}}` pinta con comas debido a la inteligencia de Angular.
+
+## Info entre componente padre a hijo
+Es necesario poner el decorador `@Input()` Significa que recibirá información del componente padre. Esto se hereda desde el template HTML y se pone una sintaxis como la siguiente `[personajes]="personajes">` donde [personajes] será el valor de nuestro nuevo componente y ="personajes" será el valor de la variable del componente padre
