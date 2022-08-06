@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-agregar-personaje',
@@ -33,4 +34,8 @@ export class AgregarPersonajeComponent {
     }
   }
 
+  /**Por más de que queramos crear más instancias, la misma tomará cargo
+   * de la centralización de la información
+   */
+  constructor( private dbzService: DbzService ){}
 }

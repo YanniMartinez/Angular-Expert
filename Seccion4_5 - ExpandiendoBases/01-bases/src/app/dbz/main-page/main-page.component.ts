@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-main-page',
@@ -29,4 +30,10 @@ export class MainPageComponent {
     this.personajes.push( guerrero );
     //console.log(guerrero)
   }
+  
+  /**Creamos instancia del service 
+   * A esto se le conoce como inyección de dependecias.
+   * Lo que hicimos fue inyectar el servicio en este componente
+  */
+  constructor( private dbzService: DbzService ){}
 }

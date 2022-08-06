@@ -45,3 +45,17 @@ agregarNuevoPersonaje( guerrero: Personaje){
 Es tan sencillo como incluir la línea de código `debugger` de JS para pausar la ejecución en ese punto y poder identificar que pasa en ese momento del programa.
 
 Además en Visual estudio podemos usar **F5** y podemos configurar una instancia de Google Chrome para depurar la aplicación de una manera muy sencilla.
+
+## Servicios
+Los servicios en Angular son semejantes a tener un **Singletone** es decir, una unica instancia en toda la app.
+
+El servicio será el lugar donde centralicemos toda la información para que se aloje la data, las peticiones, etc. 
+Es decir, contendrá la lógica. Sirve para manipular el estado de la app.
+
+```
+/**Creamos instancia del service 
+   * A esto se le conoce como inyección de dependecias.
+   * Lo que hicimos fue inyectar el servicio en este componente
+  */
+  constructor( private dbzService: DbzService ){}
+```
