@@ -9,16 +9,7 @@ import { DbzService } from '../services/dbz.service';
 })
 export class MainPageComponent {
 
-  personajes: Personaje [] = [
-    {
-      nombre: 'Goku',
-      poder: 15000
-    },
-    {
-      nombre: 'Vegeta',
-      poder: 8500
-    }
-  ]
+  personajes: Personaje[] = [] //Creandolo vacio
 
   nuevo: Personaje = {
     nombre: 'Maestro Roshi',
@@ -35,5 +26,7 @@ export class MainPageComponent {
    * A esto se le conoce como inyección de dependecias.
    * Lo que hicimos fue inyectar el servicio en este componente
   */
-  constructor( private dbzService: DbzService ){}
+  constructor( private dbzService: DbzService ){
+    this.personajes = this.dbzService.personajes; //Igualamos a la data del servicio
+  }
 }
