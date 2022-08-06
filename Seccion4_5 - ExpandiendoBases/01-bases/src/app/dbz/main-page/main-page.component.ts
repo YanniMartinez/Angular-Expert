@@ -19,25 +19,8 @@ export class MainPageComponent {
     }
   ]
 
-  /**Creando un nuevo personaje  */
   nuevo: Personaje = {
-    nombre: 'Trunks',
-    poder: 14000
-  }
-
-  agregar( ){
-    if(this.nuevo.nombre.trim().length == 0){
-      return;
-    }
-
-    /**Agregar persona y retornarlo a un objeto vacio */
-    this.personajes.push(this.nuevo);
-    
-    this.nuevo = {
-      nombre: '',
-      poder: 0
-    }
-
-    console.log(this.nuevo);
+    nombre: 'Maestro Roshi',
+    poder: 1000
   }
 }

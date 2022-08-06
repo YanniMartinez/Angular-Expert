@@ -1,0 +1,30 @@
+<h3>Agregar <small>{{ nuevo.nombre }}</small></h3>
+<hr>
+
+<!-- El que dispara todo es el Submit, no el boton. Además cacha el evento -->
+<form (ngSubmit)="agregar()">
+    
+    <!-- [Value] signifca que lo tomará de algun lado, en este caso
+    lo tomará del objeto definido en el module -->
+    <input 
+        type="text" 
+        placeholder="Nombre" 
+        name="nombre"
+        [(ngModel)]="nuevo.nombre"
+    />
+
+    <!-- [value] = "nuevo.nombre"
+    (input)="cambiarNombre($event) Captura los inputs" -->
+    
+    <input 
+        type="number" 
+        placeholder="Poder" 
+        [value]="nuevo.poder"
+        name="poder"
+        [(ngModel)]="nuevo.poder"
+    />
+    
+    <button type="submit">
+        Agregar
+    </button>
+</form>
