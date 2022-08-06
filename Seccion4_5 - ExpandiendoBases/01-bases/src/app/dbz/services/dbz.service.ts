@@ -10,7 +10,12 @@ import { Personaje } from "../interfaces/dbz.interface";
 @Injectable()
 export class DbzService{
     
-    personajes: Personaje [] = [
+    /**
+     * Sólo queremos que la modificación del arreglo de personajes
+     * Sólo sea usando este servicio, no por otro componente, por eso
+     * ponemos _personajes y private al inicio
+     */
+    private _personajes: Personaje [] = [
         {
             nombre: 'Goku',
             poder: 15000
@@ -20,6 +25,11 @@ export class DbzService{
             poder: 8500
         }
     ]
+
+    get personajes(): Personaje[]{
+        //return this._personajes Mandaria arreglo por referencia
+        return [...this._personajes]; //Lo manda como copia para no modificar
+    }
 
     constructor(){
         console.log("Servicio inicializado")
