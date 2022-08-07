@@ -44,3 +44,15 @@ Para asegurar que un elemento nunca será nulo podemos poner el caracter **!**
 
 Para crear un servicio es tan sencillo como poner el siguiente comando:
 `ng g s gifs/services/gifs --skip-tests`
+
+## Ejercicio mostrar historial
+1. Crear el ngFor dentro del elemento `sidebar.component.html` y manejarlo en su componente.
+2. Dentro del `sidebar.component.ts` crear un método como el siguiente:
+    ```
+    get historial(){
+        return this.gifsService...
+    }
+    ```
+    Esta información deberá estár conectada al servicio
+Nota: No se debe importar en ningun momento el servicio debido a la propiedad `providedIn: 'root'` la cual permite que sea accesado en cualquier punto de la app.
+
