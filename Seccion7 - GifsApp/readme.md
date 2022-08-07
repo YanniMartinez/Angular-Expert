@@ -60,3 +60,7 @@ Nota: No se debe importar en ningun momento el servicio debido a la propiedad `p
 
 Para siempre poner capital cada palabra podemos usar el siguiente pipe:
 `{{ query | titlecase }}`, esto sólo es una modificación visual, no afecta en nada a la información.
+
+## Consumo a la API de GIPHY
+[GIPHY Developers](https://developers.giphy.com/)
+Para realizar busqueda podemos consultar la [Documentación oficial](https://developers.giphy.com/docs/api/endpoint#search) para entender como es que funciona la API.

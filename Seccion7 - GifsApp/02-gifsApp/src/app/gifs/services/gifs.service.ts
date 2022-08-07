@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root' //Lleva el servicio a un nivel global de la app
 })
 export class GifsService {
-
+  
+  private apiKey: string = '';
   private _historial: string[] =[]; //Inicializa un arreglo de string
   
   get historial(){
