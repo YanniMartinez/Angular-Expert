@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -13,6 +14,13 @@ export class GifsService {
     return [...this._historial];
   }
 
+  /**
+   * Con este podremos hacer peticiones HTTP desde Angular
+   * pero este estará en base a Observables, que son más poderosos
+   * que las promesas, por lo general tienen más control que las promesas
+   */
+  constructor( private http: HttpClient){}
+
   buscarGifs( query: string ){
 
     query = query.trim().toLowerCase();
@@ -23,10 +31,14 @@ export class GifsService {
       this._historial.unshift( query );
 
       //Corta hasta 10 elementos despues de insertar
-    this._historial = this._historial.splice(0,10); //Solo traerá 10 elementos
+      this._historial = this._historial.splice(0,10); //Solo traerá 10 elementos
     }
 
-
+    /**Lanzamos petición HTTP y el suscribe es cuando responde */
+    this.http.get('https://api.giphy.com/v1/gifs/search?api_key=&q=dragon ball z&limit=10')
+      .subscribe( (resp:any) => {
+        console.log( resp );
+      });
     /* const resp = await fetch('https://api.giphy.com/v1/gifs/search?api_key=&q=dragon ball z&limit=10')
     const data = await resp.json();
     console.log(data); */

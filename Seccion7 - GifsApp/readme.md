@@ -66,3 +66,13 @@ Para siempre poner capital cada palabra podemos usar el siguiente pipe:
 Para realizar busqueda podemos consultar la [Documentación oficial](https://developers.giphy.com/docs/api/endpoint#search) para entender como es que funciona la API.
 
 ## importando módulo para peticiones HTTP de forma global
+
+```
+/**
+   * Con este podremos hacer peticiones HTTP desde Angular
+   * pero este estará en base a Observables, que son más poderosos
+   * que las promesas, por lo general tienen más control que las promesas
+   */
+  constructor( private http: HttpClient){}
+
+```
