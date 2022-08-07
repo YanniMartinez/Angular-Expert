@@ -26,6 +26,14 @@ export class GifsService {
     this._historial = this._historial.splice(0,10); //Solo traerá 10 elementos
     }
 
+    fetch('https://api.giphy.com/v1/gifs/search?api_key=&q=dragon ball z&limit=10')
+    .then( resp => {
+      resp.json().then( data => {
+        console.log(data);
+      })
+    } )
+
     console.log(this._historial);
   }
+  
 }
