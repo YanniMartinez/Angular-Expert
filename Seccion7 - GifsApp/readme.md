@@ -38,3 +38,9 @@ Recuerden que siempre tienen el código fuente al final de la sección para que 
 ## Non-null assertion operator
 [Documentación](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator)
 Para asegurar que un elemento nunca será nulo podemos poner el caracter **!**
+
+
+## Creación de servicios mediante CLI
+
+Para crear un servicio es tan sencillo como poner el siguiente comando:
+`ng g s gifs/services/gifs --skip-tests`
