@@ -18,6 +18,9 @@ export class BusquedaComponent {
     const valor = this.txtBuscar.nativeElement.value;
     //console.log( valor );
 
+    if ( valor.trim().length == 0){
+      return; //No hará nada
+    }
     //Inserta valor de busqueda
     this.gifsService.buscarGifs(valor);
 
