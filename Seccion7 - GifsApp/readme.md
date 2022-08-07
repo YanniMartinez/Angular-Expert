@@ -56,3 +56,7 @@ Para crear un servicio es tan sencillo como poner el siguiente comando:
     Esta información deberá estár conectada al servicio
 Nota: No se debe importar en ningun momento el servicio debido a la propiedad `providedIn: 'root'` la cual permite que sea accesado en cualquier punto de la app.
 
+## Pipe para poder Capital
+
+Para siempre poner capital cada palabra podemos usar el siguiente pipe:
+`{{ query | titlecase }}`, esto sólo es una modificación visual, no afecta en nada a la información.
