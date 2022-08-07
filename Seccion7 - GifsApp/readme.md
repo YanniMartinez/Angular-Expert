@@ -64,3 +64,5 @@ Para siempre poner capital cada palabra podemos usar el siguiente pipe:
 ## Consumo a la API de GIPHY
 [GIPHY Developers](https://developers.giphy.com/)
 Para realizar busqueda podemos consultar la [Documentación oficial](https://developers.giphy.com/docs/api/endpoint#search) para entender como es que funciona la API.
+
+## importando módulo para peticiones HTTP de forma global

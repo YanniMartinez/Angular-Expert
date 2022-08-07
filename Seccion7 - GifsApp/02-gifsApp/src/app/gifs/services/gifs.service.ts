@@ -13,7 +13,7 @@ export class GifsService {
     return [...this._historial];
   }
 
-  async buscarGifs( query: string ){
+  buscarGifs( query: string ){
 
     query = query.trim().toLowerCase();
 
@@ -27,9 +27,9 @@ export class GifsService {
     }
 
 
-    const resp = await fetch('https://api.giphy.com/v1/gifs/search?api_key=&q=dragon ball z&limit=10')
+    /* const resp = await fetch('https://api.giphy.com/v1/gifs/search?api_key=&q=dragon ball z&limit=10')
     const data = await resp.json();
-    console.log(data);
+    console.log(data); */
     /* fetch('https://api.giphy.com/v1/gifs/search?api_key=&q=dragon ball z&limit=10')
     .then( resp => {
       resp.json().then( data => {
