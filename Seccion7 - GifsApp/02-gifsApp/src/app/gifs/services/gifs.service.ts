@@ -15,6 +15,10 @@ export class GifsService {
   buscarGifs( query: string ){
     //Agregamos al inicio del arreglo
     this._historial.unshift( query );
+
+    //Corta hasta 10 elementos despues de insertar
+    this._historial = this._historial.splice(0,10); //Solo traerá 10 elementos
+
     console.log(this._historial);
   }
 }
