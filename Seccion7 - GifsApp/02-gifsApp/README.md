@@ -41,3 +41,24 @@ Copiar la salida, pegar en nuestro proyecto y trabajarla.
 * LocalStorage: Ahí podremos guardan información por un periodo de tiempo más prolongado hasta que la PC o navegador decida eliminarlo. **Importante: El localstorage no debería guardar ningun tipo de información sencible**
 
 Para guardar información en el localstorage no se necesita importar nada debido a que es natural de JS.
+
+## Animate style CSS
+Para agregar esta biblioteca podemos consultar [Animate.style](https://animate.style/) para ver los detalles, pero es tan sencillo como:
+
+Importar en nuestro index.html:
+```
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+
+```
+
+Y colocar el nombre de la clase en cualquier componente:
+
+```<h1 class="animate__animated animate__bounce">An animated element</h1>
+```
+
+Puede convivir sin problemas con Bootstrap.
