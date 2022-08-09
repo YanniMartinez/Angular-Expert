@@ -33,3 +33,11 @@ Despues dirigirnos a [QuickType](https://app.quicktype.io/) y poner configuracio
 <img src="quicktype.png"/>
 
 Copiar la salida, pegar en nuestro proyecto y trabajarla.
+
+## Localstorage y como usarlo
+
+* Session storage: Todo lo que se almacene en ese sitio se borrará cuando cerremos el navegador por completo.
+
+* LocalStorage: Ahí podremos guardan información por un periodo de tiempo más prolongado hasta que la PC o navegador decida eliminarlo. **Importante: El localstorage no debería guardar ningun tipo de información sencible**
+
+Para guardar información en el localstorage no se necesita importar nada debido a que es natural de JS.

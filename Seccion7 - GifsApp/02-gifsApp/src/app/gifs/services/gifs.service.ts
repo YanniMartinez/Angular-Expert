@@ -36,6 +36,13 @@ export class GifsService {
 
       //Corta hasta 10 elementos despues de insertar
       this._historial = this._historial.splice(0,10); //Solo traerá 10 elementos
+
+      /**
+       * En el localstorage sólo podemos almacenar strings, como el siguiente
+       * ejemplo:  localStorage.setItem('historial', query);
+       * Cómo no podemos almacenar un arreglo completo nos apoyaremos del JSON.stringify
+       */
+      localStorage.setItem('historial', JSON.stringify(query) );
     }
 
     /**Lanzamos petición HTTP y el suscribe es cuando responde 
