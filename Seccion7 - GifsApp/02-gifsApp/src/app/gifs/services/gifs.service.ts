@@ -38,6 +38,9 @@ export class GifsService {
 
     //Otra forma de hacerlo es:
     //this._historal = JSON.parse(localstorage.getItem('historial')!) || [];
+
+    //Cargando siempre los resultados:
+    this.resultados = JSON.parse(localStorage.getItem('resultados')!) || [];
   }
 
   buscarGifs( query: string ){
@@ -58,6 +61,7 @@ export class GifsService {
        * Cómo no podemos almacenar un arreglo completo nos apoyaremos del JSON.stringify
        */
       localStorage.setItem('historial', JSON.stringify(query) );
+
     }
 
     /**Lanzamos petición HTTP y el suscribe es cuando responde 
@@ -68,6 +72,8 @@ export class GifsService {
       .subscribe( (resp:any) => {
         console.log( resp );
         this.resultados = resp.data;
+
+        localStorage.setItem('resultados', JSON.stringify( this.resultados));
       });
     /* const resp = await fetch('https://api.giphy.com/v1/gifs/search?api_key=&q=dragon ball z&limit=10')
     const data = await resp.json();
