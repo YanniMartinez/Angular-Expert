@@ -9,9 +9,15 @@
         class="col-md-4 col-sm-6">
 
         <div class="card">
+            <!-- Ponemos entre llaves el SRC para indicarle a Angular
+            que queremos que tome el valor de gif.images.downsized_medium.url -->
+            <img [src]="gif.images.downsized_medium.url" 
+                [alt]="gif.title"
+                class="card-img-top"/>
             <div class="card-body">
                 <p class="card-text">
-                    {{ gif.title }}
+                    <!-- {{ gif.title }} -->
+                    
                 </p>
             </div>
         </div>
