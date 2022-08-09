@@ -9,6 +9,9 @@ export class GifsService {
   private apiKey: string = '';
   private _historial: string[] =[]; //Inicializa un arreglo de string
   
+  // TODO: Cambiar ANY por su tipo correspondiente
+  public resultados: any[] =[];
+
   get historial(){
     //return this._historial puede modificar al arreglo por referencia
     return [...this._historial];
@@ -35,9 +38,10 @@ export class GifsService {
     }
 
     /**Lanzamos petición HTTP y el suscribe es cuando responde */
-    this.http.get('https://api.giphy.com/v1/gifs/search?api_key=&q=dragon ball z&limit=10')
+    this.http.get(`https://api.giphy.com/v1/gifs/search?api_key=s0oBd15WQC9I0E5Nq03ZmgyR3a5WEDis&q=${query}&limit=10`)
       .subscribe( (resp:any) => {
         console.log( resp );
+        this.resultados = resp.data;
       });
     /* const resp = await fetch('https://api.giphy.com/v1/gifs/search?api_key=&q=dragon ball z&limit=10')
     const data = await resp.json();
