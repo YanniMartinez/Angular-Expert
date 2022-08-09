@@ -30,14 +30,14 @@ export class GifsService {
     //this._historial = localStorage.getItem('historial');
     
     //En el If validamos si existe el elemento historial en el localstorage
-    if ( localStorage.getItem('historial') ) {
+    /* if ( localStorage.getItem('historial') ) {
       //Como ya validamos el contenido de historial le indicamos con ! que confie en nosotros
       this._historial = JSON.parse( localStorage.getItem('historial')! );
-    }
+    } */
 
 
     //Otra forma de hacerlo es:
-    //this._historal = JSON.parse(localstorage.getItem('historial')!) || [];
+    this._historial = JSON.parse(localStorage.getItem('historial')!) || [];
 
     //Cargando siempre los resultados:
     this.resultados = JSON.parse(localStorage.getItem('resultados')!) || [];
