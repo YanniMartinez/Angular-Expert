@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Gif, SearchGifsResponse } from '../interface/gifs.interface';
 
 @Injectable({
   providedIn: 'root' //Lleva el servicio a un nivel global de la app
@@ -9,8 +10,8 @@ export class GifsService {
   private apiKey: string = '';
   private _historial: string[] =[]; //Inicializa un arreglo de string
   
-  // TODO: Cambiar ANY por su tipo correspondiente
-  public resultados: any[] =[];
+  //Ahora indicamos que es de tipo Gif
+  public resultados: Gif[] =[];
 
   get historial(){
     //return this._historial puede modificar al arreglo por referencia
@@ -37,8 +38,11 @@ export class GifsService {
       this._historial = this._historial.splice(0,10); //Solo traerá 10 elementos
     }
 
-    /**Lanzamos petición HTTP y el suscribe es cuando responde */
-    this.http.get(`https://api.giphy.com/v1/gifs/search?api_key=s0oBd15WQC9I0E5Nq03ZmgyR3a5WEDis&q=${query}&limit=10`)
+    /**Lanzamos petición HTTP y el suscribe es cuando responde 
+     * Para poder tener un tipado podemos indicar como valor generico
+     * el nombre de la interfaz que implementamos para el tipado
+    */
+    this.http.get<SearchGifsResponse>(`https://api.giphy.com/v1/gifs/search?api_key=s0oBd15WQC9I0E5Nq03ZmgyR3a5WEDis&q=${query}&limit=10`)
       .subscribe( (resp:any) => {
         console.log( resp );
         this.resultados = resp.data;

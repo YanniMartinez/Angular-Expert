@@ -25,3 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Como tipar una respuesta proveniente de una API
+Como vimos en los ejercicios previos realizar este tipo de trabajo es complicado debido a que TS no nos recomienda palabras, atributos, etc. Por lo que somos propensos a cometer errores fácilmente, una alternativa sencilla es correr la petición en Postman y copiar toda la respuesta. 
+Despues dirigirnos a [QuickType](https://app.quicktype.io/) y poner configuraciones como la siguiente:
+
+<img src="quicktype.png"/>
+
+Copiar la salida, pegar en nuestro proyecto y trabajarla.
