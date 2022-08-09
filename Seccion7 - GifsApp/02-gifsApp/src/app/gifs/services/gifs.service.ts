@@ -22,8 +22,23 @@ export class GifsService {
    * Con este podremos hacer peticiones HTTP desde Angular
    * pero este estará en base a Observables, que son más poderosos
    * que las promesas, por lo general tienen más control que las promesas
+   * Además el contructor sólo será llamado una vez para el servicio 
+   * debido a que funciona como un Singletone
    */
-  constructor( private http: HttpClient){}
+  constructor( private http: HttpClient){
+    //Este es el lugar ideal de cargar el localstorage porque será 1 sola vez
+    //this._historial = localStorage.getItem('historial');
+    
+    //En el If validamos si existe el elemento historial en el localstorage
+    if ( localStorage.getItem('historial') ) {
+      //Como ya validamos el contenido de historial le indicamos con ! que confie en nosotros
+      this._historial = JSON.parse( localStorage.getItem('historial')! );
+    }
+
+
+    //Otra forma de hacerlo es:
+    //this._historal = JSON.parse(localstorage.getItem('historial')!) || [];
+  }
 
   buscarGifs( query: string ){
 
