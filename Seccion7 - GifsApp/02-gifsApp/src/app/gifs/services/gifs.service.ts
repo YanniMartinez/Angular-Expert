@@ -60,7 +60,7 @@ export class GifsService {
        * ejemplo:  localStorage.setItem('historial', query);
        * Cómo no podemos almacenar un arreglo completo nos apoyaremos del JSON.stringify
        */
-      localStorage.setItem('historial', JSON.stringify(query) );
+      localStorage.setItem('historial', JSON.stringify(this._historial) );
 
     }
 
